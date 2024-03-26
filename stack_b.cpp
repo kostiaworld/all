@@ -74,7 +74,7 @@ public:
 };
 
 void functionA(Stack& callStack) {
-    cout << "Inside function A" << endl;
+    cout << "внутри первого сервера A" << endl;
 
    
     FunctionCallInfo info;
@@ -87,7 +87,7 @@ void functionA(Stack& callStack) {
 }
 
 void functionB(Stack& callStack) {
-    cout << "Inside function B" << endl;
+    cout << "внутри второго сервера B" << endl;
 
 
     FunctionCallInfo info;
@@ -112,14 +112,14 @@ int main() {
 
 
     returnInfo = callStack.peek(); 
-    cout << "Returning from function B" << endl;
-    cout << "Local variables in B: " << returnInfo.localVar1 << ", " << returnInfo.localVar2 << endl;
+    cout << "возврат к работе сервера B" << endl;
+    cout << "переменные B: " << returnInfo.localVar1 << ", " << returnInfo.localVar2 << endl;
     callStack.pop(); 
 
 
     returnInfo = callStack.peek();
-    cout << "Returning from function A" << endl;
-    cout << "Local variables in A: " << returnInfo.localVar1 << ", " << returnInfo.localVar2 << endl;
+    cout << "возврат к работе сервера A" << endl;
+    cout << "переменные A: " << returnInfo.localVar1 << ", " << returnInfo.localVar2 << endl;
     callStack.pop(); 
 
     return 0;
