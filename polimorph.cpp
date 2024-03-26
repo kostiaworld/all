@@ -2,13 +2,13 @@
 #include <string>
 
 using namespace std;
-// Abstract base class representing NetworkSecurity
+
 class NetworkSecurity {
 public:
     virtual string CheckSecurity() = 0;
 };
 
-// Concrete class representing Firewall
+
 class Firewall : public NetworkSecurity {
 private:
     string name;
@@ -21,7 +21,7 @@ public:
     }
 };
 
-// Concrete class representing Antivirus
+
 class Antivirus : public NetworkSecurity {
 private:
     string name;
@@ -34,7 +34,7 @@ public:
     }
 };
 
-// Function to perform security check
+
 void PerformSecurityCheck(NetworkSecurity* s) {
     cout << s->CheckSecurity() << endl;
 }
